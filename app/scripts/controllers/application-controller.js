@@ -1,4 +1,4 @@
-Yeoman-Ember-Basic-Example.ApplicationController = Ember.ObjectController.extend({
+App.ApplicationController = Em.Controller.extend({
   // Implement your controller here.
 });
 

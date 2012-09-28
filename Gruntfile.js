@@ -1,5 +1,8 @@
 module.exports = function( grunt ) {
   'use strict';
+
+  grunt.loadNpmTasks('grunt-contrib-ember');
+
   //
   // Grunt configuration:
   //
@@ -19,10 +22,23 @@ module.exports = function( grunt ) {
     coffee: {
       compile: {
         files: {
-          'temp/scripts/*.js': 'app/scripts/**/*.coffee'
+          'app/scripts': 'app/scripts/**/*.coffee'
         },
         options: {
           basePath: 'app/scripts'
+        }
+      }
+    },
+
+    ember_handlebars: {
+      compile: {
+        options: {
+          templateName: function(filename) {
+            return filename.replace(/app\/scripts\/templates\//, '');
+          }
+        },
+        files: {
+          'app/scripts/templates.js': 'app/scripts/templates/**/*.handlebars'
         }
       }
     },
@@ -56,6 +72,10 @@ module.exports = function( grunt ) {
       coffee: {
         files: 'app/scripts/**/*.coffee',
         tasks: 'coffee reload'
+      },
+      ember_handlebars: {
+        files: 'app/scripts/templates/**/*.handlebars',
+        tasks: 'ember_handlebars reload'
       },
       compass: {
         files: [

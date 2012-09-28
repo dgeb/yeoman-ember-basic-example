@@ -1,3 +1,1 @@
-
-
-var Yeoman-Ember-Basic-Example = Ember.Application.create();
+App = Em.Application.create({});

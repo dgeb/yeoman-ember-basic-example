@@ -1,3 +1,3 @@
-Yeoman-Ember-Basic-Example.ApplicationView = Ember.View.extend({
+App.ApplicationView = Em.View.extend({
   templateName: 'application'
 });
