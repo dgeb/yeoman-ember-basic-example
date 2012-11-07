@@ -189,10 +189,17 @@ module.exports = function( grunt ) {
       optimize: 'none',
       baseUrl: './scripts',
       wrap: true
-    },
+    }
   });
 
   // Alias the `test` task to run the `mocha` task instead
   grunt.registerTask('test', 'mocha');
 
+  // Hack provided by @xMartin to force the inclusion of `ember_templates`
+  // in the `clean` task. By adding it to `clean` we make sure it is called
+  // whenever something new is started.
+  //
+  // See: https://github.com/dgeb/grunt-ember-templates/issues/2#issuecomment-9927682
+  grunt.renameTask('clean', 'yeoman-clean');
+  grunt.registerTask('clean', 'yeoman-clean ember_templates');
 };
