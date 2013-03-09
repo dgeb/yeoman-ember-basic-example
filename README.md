@@ -10,13 +10,7 @@ Install required plugin:
 $ npm install grunt-ember-templates
 ```
 
-Precompile templates (this step won't be necessary after [some issues](https://github.com/yeoman/yeoman/issues/595) are resolved in yeoman):
-
-```
-$ grunt ember_templates
-```
-
-Fire up the server:
+Fire up the server (it will compile the templates as first task):
 
 ```
 $ grunt server
