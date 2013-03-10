@@ -48,7 +48,7 @@ module.exports = function (grunt) {
             },
             ember_templates: {
                 files: ['app/scripts/{,*/}*.handlebars'],
-                tasks: ['ember_templates', 'reload']
+                tasks: ['ember_templates', 'livereload']
             },
             compass: {
                 files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
@@ -178,7 +178,7 @@ module.exports = function (grunt) {
                 files: {
                     '<%= yeoman.dist %>/scripts/main.js': [
                         '<%= yeoman.app %>/scripts/{,*/}*.js'
-                    ],
+                    ]
                 }
             }
         },
