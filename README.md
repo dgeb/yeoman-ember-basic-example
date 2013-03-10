@@ -4,10 +4,12 @@ A very primitive example of an Ember.js app managed by Yeoman.
 
 ## Getting started
 
-Install required plugin:
+Install [Yeoman and its dependencies](http://yeoman.io/)
+
+Install dependencies:
 
 ```
-$ npm install grunt-ember-templates
+$ npm install
 ```
 
 Fire up the server (it will compile the templates as first task):
